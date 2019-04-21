@@ -1,0 +1,122 @@
+# This is a TOML document.
+title = "TOML Example"
+
+
+[database]
+server = "192.168.1.1"
+ports = [8001, 8001, 8002]
+connection_max = 5000
+enabled = true
+
+
+[servers]
+[servers.alpha]
+ip = "10.0.0.1"
+dc = "eqdc10"
+[servers.beta]
+ip = "10.0.0.2"
+dc = "eqdc10"
+
+
+[clients]
+data = [["gamma", "delta"], [1, 2]]
+# Line breaks are OK when inside arrays
+hosts = [
+  "alpha",
+  "omega"
+]
+
+
+[String]
+singleline = "I'm a string. \"You can quote me\". Name\tJos\u00E9\nLocation\tSF."
+multiline = """
+\b     - backspace       (U+0008)
+\t     - tab             (U+0009)
+\n     - linefeed        (U+000A)
+\f     - form feed       (U+000C)
+\r     - carriage return (U+000D)
+\"     - quote           (U+0022)
+\/     - slash           (U+002F)
+\\     - backslash       (U+005C)
+\u1234 - unicode         (U+1234)
+"""
+literal = '''
+\b     - backspace       (U+0008)
+\t     - tab             (U+0009)
+\n     - linefeed        (U+000A)
+\f     - form feed       (U+000C)
+\r     - carriage return (U+000D)
+\"     - quote           (U+0022)
+\/     - slash           (U+002F)
+\\     - backslash       (U+005C)
+\u1234 - unicode         (U+1234)
+'''
+
+
+[Number]
+int1 =+99
+int2 = 42
+int3 = 0
+int4 =-17
+int5 = 1_000
+int6 = 5_349_221
+int7 = 1_2_3_4_5     # VALID but discouraged
+# fractional
+flt1 =+1.0
+flt2 = 3.1415
+flt3 =-0.01
+# exponent
+flt4 = 5e+22
+flt5 =+1e6
+flt6 =-2E-2
+flt7 =+6.626e-34
+flt8 = 224_617.445_991_228
+# infinity
+sf1 = inf # positive infinity
+sf2 =+inf # positive infinity
+sf3 =-inf # negative infinity
+# not a number
+sf4 = nan # actual sNaN/qNaN encoding is implementation specific
+sf5 =+nan # same as `nan`
+sf6 =-nan # valid, actual encoding is implementation specific
+
+
+[DateTime]
+# Local Date
+ld1 = 1979-05-27
+# Local Time
+lt1 = 07:32:00
+lt2 = 00:32:00.999999
+# Local Date-Time
+ldt1 = 1979-05-27T07:32:00
+ldt2 = 1979-05-27T00:32:00.999999
+# Offset Date-Time
+odt1 = 1979-05-27T07:32:00Z
+odt2 = 1979-05-27T00:32:00-07:00
+odt3 = 1979-05-27T00:32:00.999999-07:00
+odt4 = 1979-05-27 07:32:00Z
+
+
+[Array]
+arr1 = [1, 2, 3]
+arr2 = ["red", "yellow", "green"]
+arr3 = [[1, 2 ], [3, 4, 5]]
+arr4 = ["all", 'strings', """are the same""", '''type''']
+arr5 = [[1, 2 ], ["a", "b", "c"]]
+#INVALID: arr6 = [1, 2.0] 
+
+
+[[fruit]] # Array
+name = "apple"
+[[fruit.variety]]
+name = "red delicious"
+[[fruit.variety]]
+name = "granny smith"
+[fruit.physical]
+color = "red"
+shape = "round"
+inlineTable = [
+    { x = 1, y = 2, z = 3 },
+    { x = 7, y = 8, z = 9 },
+    { x = 2, y = 4, z = 8 },
+]

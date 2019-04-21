@@ -1,0 +1,41 @@
+{
+    "name": "toml",
+    "displayName": "TOML Language Support",
+    "description": "TOML language support",
+    "version": "0.3.0",
+    "engines": {
+        "vscode": "^1.8.0"
+    },
+    "categories": [
+        "Programming Languages"
+    ],
+    "scripts": {
+        "build": "ts-node extension/extension.ts",
+        "lint": "tslint **/*.ts --fix"
+    },
+    "contributes": {
+        "languages": [
+            {
+                "id": "toml",
+                "aliases": [
+                    "TOML"
+                ],
+                "extensions": [
+                    ".toml",
+                    ".tml"
+                ],
+                "configuration": "./extension/toml.configuration.json"
+            }
+        ],
+        "grammars": [
+            {
+                "language": "toml",
+                "scopeName": "source.toml",
+                "path": "./extension/toml.tmLanguage.json"
+            }
+        ]
+    },
+    "devDependencies": {
+        "@types/node": "^11.13.6"
+    }
+}
