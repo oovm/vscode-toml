@@ -1,0 +1,41 @@
+[String]
+singleline = "this is a new line"
+multiline = """
+\b     - backspace       (U+0008)
+\t     - tab             (U+0009)
+\n     - linefeed        (U+000A)
+\f     - form feed       (U+000C)
+\r     - carriage return (U+000D)
+\"     - quote           (U+0022)
+\u1234 - unicode         (U+1234)
+"""
+
+[Number]
+int1 = +5349221
+int2 = -5_3_49_221
+fp1  = +6.626e-34
+fp2  = 224_617.445_991_228
+sf1  = -inf # positive infinity
+sf2  = +nan # not a number
+
+[DateTime]
+ld1 = 1979-05-27 # Local Date
+lt1 = 07:32:00 # Local Time
+ldt1 = 1979-05-27T07:32:00 # Local Date-Time
+odt1 = 1979-05-27T07:32:00Z # Offset Date-Time
+
+[Array]
+array = [[1, 2 ], ["a", "b", "c"]]
+inlineTable = [
+    { x = 1, y = 2, z = 3 },
+    { x = 7, y = 8, z = 9 },
+    { x = 2, y = 4, z = 8 },
+]
+
+
+
+
+
+
+
+

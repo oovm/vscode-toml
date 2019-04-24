@@ -3,12 +3,22 @@ TOML support for vscode
 
 Current support version TOML v0.3
 
-# Theme Compatibility
+## Theme Compatibility
 
 Highlighting is compatible with all themes, but the visual experience will be affected by the theme.
 
-Main development environment was under FlatMonokai
+Main development environment was under [Flatland Monokai](https://marketplace.visualstudio.com/items?itemName=gerane.Theme-FlatlandMonokai).
+
+
+![Flatland Monokai](https://user-images.githubusercontent.com/17541209/56551634-76ec5400-65bb-11e9-84d0-5771027b1513.png)
+
 
 And we review the visual experience under: Dark, OneDarkPro, Monokai, Electron
 
 There also a Specialized theme for TOML: Nyx
+
+![Nyx](https://user-images.githubusercontent.com/17541209/56551632-76ec5400-65bb-11e9-97f4-0764a3dfabd4.png)
+
+## Todo
+- [ ] TOML Formatter
+- [ ] Support v0.4
