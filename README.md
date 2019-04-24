@@ -1,5 +1,6 @@
 TOML support for vscode
 =======================
+*Tom's Obvious Minimal Language*
 
 Current support version TOML v0.3
 
@@ -15,10 +16,16 @@ Main development environment was under [Flatland Monokai](https://marketplace.vi
 
 And we review the visual experience under: Dark, OneDarkPro, Monokai, Electron
 
-There also a Specialized theme for TOML: Nyx
+There also a specialized theme for TOML: Nyx
 
 ![Nyx](https://user-images.githubusercontent.com/17541209/56551632-76ec5400-65bb-11e9-97f4-0764a3dfabd4.png)
 
 ## Todo
 - [ ] TOML Formatter
 - [ ] Support v0.4
+
+[Covert to TOML NOW!](https://toolkit.site/format.html)
+
+## limitation
+The plugin only provide static code highlighting, so it can't find all the invaild inputs.
+

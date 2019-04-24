@@ -24,6 +24,9 @@
                     ".toml",
                     ".tml"
                 ],
+                "filenames": [
+                    "Cargo.lock"
+                ],
                 "configuration": "./extension/toml.configuration.json"
             }
         ],
