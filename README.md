@@ -1,8 +1,10 @@
 TOML support for vscode
 =======================
-*Tom's Obvious Minimal Language*
+[![Site](https://img.shields.io/badge/TOML-v0.3-%23FF4D5B.svg?style=flat-square)](https://github.com/toml-lang/toml)
+[![LICENSE](https://img.shields.io/badge/license-Anti%20996-blue.svg?style=flat-square)](https://github.com/996icu/996.ICU/blob/master/LICENSE)
+[![LICENSE](https://img.shields.io/badge/license-MPL%202.0-blue.svg?style=flat-square)](https://github.com/GalAster/vscode-toml/blob/master/License.md)
 
-Current support version TOML v0.3
+*Tom's Obvious Minimal Language*
 
 ## Theme Compatibility
 
@@ -10,22 +12,17 @@ Highlighting is compatible with all themes, but the visual experience will be af
 
 Main development environment was under [Flatland Monokai](https://marketplace.visualstudio.com/items?itemName=gerane.Theme-FlatlandMonokai).
 
-
 ![Flatland Monokai](https://user-images.githubusercontent.com/17541209/56551634-76ec5400-65bb-11e9-84d0-5771027b1513.png)
-
 
 And we review the visual experience under: Dark, OneDarkPro, Monokai, Electron
 
-There also a specialized theme for TOML: Nyx
+There also a specialized theme for TOML: [Nyx](https://marketplace.visualstudio.com/items?itemName=Aster.nyx-theme)
 
 ![Nyx](https://user-images.githubusercontent.com/17541209/56551632-76ec5400-65bb-11e9-97f4-0764a3dfabd4.png)
 
-## Todo
+## Todo List
 - [ ] TOML Formatter
 - [ ] Support v0.4
 
-[Covert to TOML NOW!](https://toolkit.site/format.html)
-
-## limitation
+## Limitation
 The plugin only provide static code highlighting, so it can't find all the invaild inputs.
-

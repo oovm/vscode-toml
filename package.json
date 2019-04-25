@@ -3,6 +3,11 @@
     "displayName": "TOML Language Support",
     "description": "TOML language support",
     "version": "0.3.0",
+    "icon": "icon.png",
+    "repository": {
+		"type": "git",
+		"url": "https://github.com/GalAster/vscode-toml.git"
+	},
     "engines": {
         "vscode": "^1.8.0"
     },
@@ -26,6 +31,9 @@
                 ],
                 "filenames": [
                     "Cargo.lock"
+                ],
+                "mimetypes": [
+                    "text/x-toml"
                 ],
                 "configuration": "./extension/toml.configuration.json"
             }

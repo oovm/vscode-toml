@@ -1,11 +1,10 @@
-
 const escape = [
     {
-        match: '\\\\([btnfr"\\\\ \\n]|u[0-9A-Fa-f]{4}|U[0-9A-Fa-f]{8})',
+        match: '\\\\([btnfr"\\\\\\n/ ]|u[0-9A-Fa-f]{4}|U[0-9A-Fa-f]{8})',
         name: 'constant.character.escape.toml',
     },
     {
-        match: '\\\\[^btnfr"\\\\\\n]',
+        match: '\\\\[^btnfr/"\\\\\\n]',
         name: 'invalid.illegal.escape.toml',
     },
 ]

@@ -182,11 +182,11 @@
                     "end": "\"\"\"",
                     "patterns": [
                         {
-                            "match": "\\\\([btnfr\"\\\\ \\n]|u[0-9A-Fa-f]{4}|U[0-9A-Fa-f]{8})",
+                            "match": "\\\\([btnfr\"\\\\\\n/ ]|u[0-9A-Fa-f]{4}|U[0-9A-Fa-f]{8})",
                             "name": "constant.character.escape.toml"
                         },
                         {
-                            "match": "\\\\[^btnfr\"\\\\\\n]",
+                            "match": "\\\\[^btnfr/\"\\\\\\n]",
                             "name": "invalid.illegal.escape.toml"
                         }
                     ]
@@ -194,38 +194,16 @@
                 {
                     "name": "string.quoted.single.basic.line.toml",
                     "match": "\"[^\"\\\\]*(?:\\\\.[^\"\\\\]*)*\"",
-                    "catch": {
-                        "1": [
-                            {
-                                "match": "\\\\([btnfr\"\\\\ \\n]|u[0-9A-Fa-f]{4}|U[0-9A-Fa-f]{8})",
-                                "name": "constant.character.escape.toml"
-                            },
-                            {
-                                "match": "\\\\[^btnfr\"\\\\\\n]",
-                                "name": "invalid.illegal.escape.toml"
-                            }
-                        ],
-                        "2": [
-                            {
-                                "match": "\\\\([btnfr\"\\\\ \\n]|u[0-9A-Fa-f]{4}|U[0-9A-Fa-f]{8})",
-                                "name": "constant.character.escape.toml"
-                            },
-                            {
-                                "match": "\\\\[^btnfr\"\\\\\\n]",
-                                "name": "invalid.illegal.escape.toml"
-                            }
-                        ],
-                        "3": [
-                            {
-                                "match": "\\\\([btnfr\"\\\\ \\n]|u[0-9A-Fa-f]{4}|U[0-9A-Fa-f]{8})",
-                                "name": "constant.character.escape.toml"
-                            },
-                            {
-                                "match": "\\\\[^btnfr\"\\\\\\n]",
-                                "name": "invalid.illegal.escape.toml"
-                            }
-                        ]
-                    }
+                    "patterns": [
+                        {
+                            "match": "\\\\([btnfr\"\\\\\\n/ ]|u[0-9A-Fa-f]{4}|U[0-9A-Fa-f]{8})",
+                            "name": "constant.character.escape.toml"
+                        },
+                        {
+                            "match": "\\\\[^btnfr/\"\\\\\\n]",
+                            "name": "invalid.illegal.escape.toml"
+                        }
+                    ]
                 },
                 {
                     "name": "string.quoted.triple.literal.block.toml",
