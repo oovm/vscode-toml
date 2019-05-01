@@ -42,7 +42,7 @@ const leading0 = [
         },
     },
     {
-        match: '(?<!\\w)((?:0o(([0-7](([0-7]|_[0-7])+)?))))(?!\\w)',
+        match: /(?<!\w)(0o[0-7](_?[0-7])*)(?!\w)/.source,
         captures: {
             1: {
                 name: 'constant.numeric.oct.toml',
@@ -50,7 +50,7 @@ const leading0 = [
         },
     },
     {
-        match: '(?<!\\w)((?:0b(([0-1](([0-1]|_[0-1])+)?))))(?!\\w)',
+        match: /(?<!\w)(0b[0-1](_?[0-1])*)(?!\w)/.source,
         captures: {
             1: {
                 name: 'constant.numeric.bin.toml',

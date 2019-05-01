@@ -1,10 +1,6 @@
 const local_time = {
-    captures: {
-        1: {
-            name: 'constant.other.time.toml',
-        },
-    },
-    match: '(\\d{2}:\\d{2}:\\d{2}(?:\\.\\d+)?)',
+    name: 'constant.other.time.toml',
+    match: /\d{2}:\d{2}:\d{2}(?:\.\d+)?/.source,
 }
 
 const local_date = {
