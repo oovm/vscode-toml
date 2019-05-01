@@ -14,22 +14,50 @@ const float = {
         },
     },
 }
-const inf = {
-    match: '(?<!\\w)([\\+\\-]?inf)(?!\\w)',
-    captures: {
-        1: {
-            name: 'constant.numeric.inf.toml',
+const sp = [
+    {
+        match: '(?<!\\w)([\\+\\-]?inf)(?!\\w)',
+        captures: {
+            1: {
+                name: 'constant.numeric.inf.toml',
+            },
         },
     },
-}
-const nan = {
-    match: '(?<!\\w)([\\+\\-]?nan)(?!\\w)',
-    captures: {
-        1: {
-            name: 'constant.numeric.nan.toml',
+    {
+        match: '(?<!\\w)([\\+\\-]?nan)(?!\\w)',
+        captures: {
+            1: {
+                name: 'constant.numeric.nan.toml',
+            },
+        },
+    }
+]
+const leading0 = [
+    {
+        match: '(?<!\\w)((?:0x(([0-9a-fA-F](([0-9a-fA-F]|_[0-9a-fA-F])+)?))))(?!\\w)',
+        captures: {
+            1: {
+                name: 'constant.numeric.hex.toml',
+            },
         },
     },
-}
-
+    {
+        match: '(?<!\\w)((?:0o(([0-7](([0-7]|_[0-7])+)?))))(?!\\w)',
+        captures: {
+            1: {
+                name: 'constant.numeric.oct.toml',
+            },
+        },
+    },
+    {
+        match: '(?<!\\w)((?:0b(([0-1](([0-1]|_[0-1])+)?))))(?!\\w)',
+        captures: {
+            1: {
+                name: 'constant.numeric.bin.toml',
+            },
+        },
+    }
+]
 //ordered, float before integer
-export const number: any = [inf, nan, float, integer]
+export const number: any = [float, integer]
+    .concat(sp, leading0)

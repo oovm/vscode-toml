@@ -2,7 +2,7 @@
     "name": "toml",
     "displayName": "TOML Language Support",
     "description": "TOML language support",
-    "version": "0.3.0",
+    "version": "0.4.0",
     "icon": "icon.png",
     "repository": {
 		"type": "git",
