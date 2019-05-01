@@ -3,7 +3,7 @@ import { data, comment, table, key_value, illegal } from '../source'
 function including(_: string) { return { include: '#' + _ } }
 
 const syntax = {
-    version: 'v0.3.0',
+    version: 'v0.4.0',
     scopeName: 'source.toml',
     uuid: '9b00c027-8f13-4f5a-a57e-d90478a1f817',
     information_for_contributors: [

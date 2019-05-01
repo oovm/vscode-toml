@@ -50,7 +50,7 @@ const leading0 = [
         },
     },
     {
-        match: /(?<!\w)(0b[0-1](_?[0-1])*)(?!\w)/.source,
+        match: /(?<!\w)(0b[01](_?[01])*)(?!\w)/.source,
         captures: {
             1: {
                 name: 'constant.numeric.bin.toml',

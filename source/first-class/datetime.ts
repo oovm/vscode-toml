@@ -4,12 +4,8 @@ const local_time = {
 }
 
 const local_date = {
-    captures: {
-        1: {
-            name: 'constant.other.date.toml',
-        },
-    },
-    match: '(\\d{4}\\-\\d{2}\\-\\d{2})',
+    name: 'constant.other.date.toml',
+    match: /\d{4}\-\d{2}\-\d{2}/.source,
 }
 
 const local_date_time = {
