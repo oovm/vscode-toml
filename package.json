@@ -29,7 +29,8 @@
                     ".tml"
                 ],
                 "filenames": [
-                    "Cargo.lock"
+                    "Cargo.lock",
+                    "Gopkg.lock"
                 ],
                 "mimetypes": [
                     "text/x-toml"
