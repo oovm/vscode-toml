@@ -1,29 +1,15 @@
-import { writeFileSync } from 'fs'
-import { data, comment, table, key_value, illegal } from '../source'
-function including(_: string) { return { include: '#' + _ } }
+import * as vscode from 'vscode'
+import { rs_format } from 'toml_vscode'
 
-const syntax = {
-    version: 'v0.4.0',
-    scopeName: 'source.toml',
-    uuid: '9b00c027-8f13-4f5a-a57e-d90478a1f817',
-    information_for_contributors: [
-        'aster: galaster@foxmail.com',
-    ],
-    patterns: [
-        including('comment'),
-        including('table'),
-        including('key_value'),
-    ],
-    repository: {
-        comment: comment,
-        table: table,
-        key_value: key_value,
-        data: data,
-        illegal: illegal,
-    },
+export function activate(context: vscode.ExtensionContext) {
+    // 👍 formatter implemented using API
+    vscode.languages.registerDocumentFormattingEditProvider('toml', {
+        provideDocumentFormattingEdits(document: vscode.TextDocument): vscode.TextEdit[] {
+            const text = document.getText()
+            const start = document.lineAt(0).range.start
+            const end = document.lineAt(document.lineCount - 1).range.end
+            const r = new vscode.Range(start, end)
+            return [vscode.TextEdit.replace(r, rs_format(text))]
+        },
+    })
 }
-
-writeFileSync(
-    __dirname + '/toml.tmLanguage.json',
-    JSON.stringify(syntax, null, 4),
-)
