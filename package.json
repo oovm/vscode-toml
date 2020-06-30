@@ -2,16 +2,21 @@
     "name": "toml",
     "displayName": "TOML Language Support",
     "description": "TOML language support",
-    "version": "0.4.0",
+    "version": "0.5.0",
     "repository": {
         "type": "git",
         "url": "https://github.com/GalAster/vscode-toml.git"
     },
+    "main": "./dist/extension.js",
     "engines": {
         "vscode": "^1.8.0"
     },
+    "activationEvents": [
+		"onLanguage:toml"
+	],
     "categories": [
-        "Programming Languages"
+        "Programming Languages",
+        "Formatters"
     ],
     "scripts": {
         "build": "ts-node source/build.ts && tsc",
@@ -47,9 +52,10 @@
         ]
     },
     "dependencies": {
-        "toml_vscode": "^0.1.1"
+        "toml_vscode": "^0.1.2"
     },
     "devDependencies": {
-        "@types/node": "^11.13.6"
+        "@types/node": "^13.7.6",
+        "vscode": "^1.1.36"
     }
 }

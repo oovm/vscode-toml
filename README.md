@@ -8,6 +8,15 @@ TOML support for vscode
 
 https://github.com/GalAster/vscode-toml
 
+## Todo List
+
+- [x] TOML Formatter
+- [x] Support v1.0
+- [ ] Json to Toml
+- [ ] Yaml to Toml
+
+LSP is not included in the plan of this project, if you want a better dynamic interactive experience, please try [Even Better Toml](https://marketplace.visualstudio.com/items?itemName=tamasfe.even-better-toml)!
+
 ## Theme Compatibility
 
 Highlighting is compatible with all themes, but the visual experience will be affected by the theme.
@@ -21,13 +30,6 @@ And we review the visual experience under: Dark, OneDarkPro, Monokai, Electron
 There also a specialized theme for TOML: [Nyx](https://marketplace.visualstudio.com/items?itemName=Aster.nyx-theme)
 
 ![Nyx](https://user-images.githubusercontent.com/17541209/56551632-76ec5400-65bb-11e9-97f4-0764a3dfabd4.png)
-
-## Todo List
-
-- [x] TOML Formatter
-- [x] Support v1.0
-- [ ] Json to Toml
-- [ ] Yaml to Toml
 
 ## Limitation
 The plugin only provide static lexical highlighting, so it can't find all the invaild inputs.
