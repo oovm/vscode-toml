@@ -1,4 +1,5 @@
-node_modules
-source
-test
+node_modules/
+!node_modules/toml_vscode/
+source/
+test/
 extension/extension.ts

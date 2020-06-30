@@ -3,6 +3,9 @@
 .idea
 .vs
 
+# Bin
+*.vsix
+
 # Node
 node_modules
 dist/
